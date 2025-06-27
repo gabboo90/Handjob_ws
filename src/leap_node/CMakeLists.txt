@@ -12,6 +12,8 @@ find_package(geometry_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(tf2 REQUIRED)
+find_package(visualization_msgs REQUIRED)
+
 
 
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -29,6 +31,7 @@ ament_target_dependencies(sample_node
   geometry_msgs
   builtin_interfaces
   tf2
+  visualization_msgs
 )
 
 target_include_directories(sample_node PUBLIC
