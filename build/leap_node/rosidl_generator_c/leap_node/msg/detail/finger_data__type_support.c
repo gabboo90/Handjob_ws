@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "leap_node/msg/detail/finger_data__type_support.h"
-#include "leap_node/msg/detail/finger_data__functions.h"
 #include "leap_node/msg/detail/finger_data__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "leap_node/msg/detail/finger_data__functions.h"
 
 #ifdef __cplusplus
 extern "C"

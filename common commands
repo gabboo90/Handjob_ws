@@ -16,3 +16,6 @@ ros2 run dynamixel_sdk_examples read_write_node
 
 
 ros2 run scservo_ros WritePos /dev/ttyACM1 1 set_position 2000
+
+
+ros2 run leap_node sample_node

@@ -38,5 +38,11 @@ install(TARGETS sample_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
+
+install(DIRECTORY msg
+  DESTINATION share/${PROJECT_NAME}
+)
+
+
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()

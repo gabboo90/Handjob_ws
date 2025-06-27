@@ -1,1 +1,0 @@
-Invoking command in '/home/gabi/Desktop/Handjob_ws/build/scservo_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gabi/Desktop/Handjob_ws/src/scservo_ros -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gabi/Desktop/Handjob_ws/install/scservo_ros

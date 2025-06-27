@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "leap_node/msg/detail/hand_data__functions.h"
 #include "leap_node/msg/detail/hand_data__struct.h"
-#include "leap_node/msg/detail/hand_data__type_support.h"
+#include "leap_node/msg/detail/hand_data__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "leap_node/msg/detail/hand_data__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

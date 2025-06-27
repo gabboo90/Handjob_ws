@@ -1,1 +1,0 @@
-/home/gabi/Desktop/Handjob_ws/build/scservo_ros/ament_cmake_core/scservo_rosConfig-version.cmake

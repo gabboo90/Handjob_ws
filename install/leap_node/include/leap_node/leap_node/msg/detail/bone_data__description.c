@@ -23,9 +23,9 @@ leap_node__msg__BoneData__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
+#include "builtin_interfaces/msg/detail/time__functions.h"
 #include "geometry_msgs/msg/detail/vector3__functions.h"
 #include "geometry_msgs/msg/detail/point__functions.h"
-#include "builtin_interfaces/msg/detail/time__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG

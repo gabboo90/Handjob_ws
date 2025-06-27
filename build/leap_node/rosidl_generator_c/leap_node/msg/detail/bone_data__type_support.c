@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "leap_node/msg/detail/bone_data__type_support.h"
-#include "leap_node/msg/detail/bone_data__struct.h"
 #include "leap_node/msg/detail/bone_data__functions.h"
+#include "leap_node/msg/detail/bone_data__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "leap_node/msg/detail/bone_data__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -1,1 +1,0 @@
-Invoking command in '/home/gabi/Desktop/Handjob_ws/build/dynamixel_sdk': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gabi/Desktop/Handjob_ws/src/DynamixelSDK/ros/dynamixel_sdk -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gabi/Desktop/Handjob_ws/install/dynamixel_sdk
