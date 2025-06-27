@@ -4,3 +4,7 @@ leap_node.egg-info/PKG-INFO
 leap_node.egg-info/SOURCES.txt
 leap_node.egg-info/dependency_links.txt
 leap_node.egg-info/top_level.txt
+leap_node/msg/__init__.py
+leap_node/msg/_bone_data.py
+leap_node/msg/_finger_data.py
+leap_node/msg/_hand_data.py

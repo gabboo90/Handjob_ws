@@ -280,7 +280,7 @@ SITE:STRING=laptop
 TinyXML2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/tinyxml2
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/opt/ros/jazzy/lib/libtf2.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/jazzy/share/ament_cmake/cmake
@@ -506,6 +506,9 @@ statistics_msgs_DIR:PATH=/opt/ros/jazzy/share/statistics_msgs/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/jazzy/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for tf2.
+tf2_DIR:PATH=/opt/ros/jazzy/share/tf2/cmake
 
 //The directory containing a CMake configuration file for tracetools.
 tracetools_DIR:PATH=/opt/ros/jazzy/share/tracetools/cmake
@@ -733,6 +736,8 @@ _Python3_INCLUDE_DIR:INTERNAL=/usr/include/python3.12
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;;cpython-312-x86_64-linux-gnu;abi3;/usr/lib/python3.12;/usr/lib/python3.12;/usr/local/lib/python3.12/dist-packages;/usr/local/lib/python3.12/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=4c8bfa8951e99fa32e4000a94f8c04a2
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //Path to a library.
 _Python3_LIBRARY_RELEASE:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.12.so
 _Python3_NUMPY_SIGNATURE:INTERNAL=d5ddeb909deee809c18fdfbea68bafbe

@@ -11,6 +11,8 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(tf2 REQUIRED)
+
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/BoneData.msg"
@@ -26,6 +28,11 @@ ament_target_dependencies(sample_node
   std_msgs
   geometry_msgs
   builtin_interfaces
+  tf2
+)
+
+target_include_directories(sample_node PUBLIC
+  ${tf2_INCLUDE_DIRS}
 )
 
 target_link_libraries(sample_node Leap)

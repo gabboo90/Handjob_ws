@@ -14,5 +14,6 @@
     "/home/gabi/Desktop/Handjob_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages",
     "/home/gabi/Desktop/Handjob_ws/install/dynamixel_sdk/lib/python3.12/site-packages",
     "/opt/ros/jazzy/lib/python3.12/site-packages"
-  ]
+  ],
+  "cmake.sourceDirectory": "/home/gabi/Desktop/Handjob_ws/src/leap_node"
 }
