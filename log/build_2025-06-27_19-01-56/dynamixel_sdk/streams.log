@@ -1,0 +1,19 @@
+[0.022s] Invoking command in '/home/gabi/Desktop/Handjob_ws/build/dynamixel_sdk': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gabi/Desktop/Handjob_ws/src/DynamixelSDK/ros/dynamixel_sdk -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gabi/Desktop/Handjob_ws/install/dynamixel_sdk
+[0.120s] -- The C compiler identification is GNU 13.3.0
+[0.236s] -- The CXX compiler identification is GNU 13.3.0
+[0.265s] -- Detecting C compiler ABI info
+[0.422s] -- Detecting C compiler ABI info - done
+[0.445s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.446s] -- Detecting C compile features
+[0.447s] -- Detecting C compile features - done
+[0.466s] -- Detecting CXX compiler ABI info
+[0.665s] -- Detecting CXX compiler ABI info - done
+[0.677s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.677s] -- Detecting CXX compile features
+[0.678s] -- Detecting CXX compile features - done
+[0.681s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.922s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.051s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.444s] -- Configuring done (1.4s)
+[1.451s] -- Generating done (0.0s)
+[1.454s] -- Build files have been written to: /home/gabi/Desktop/Handjob_ws/build/dynamixel_sdk

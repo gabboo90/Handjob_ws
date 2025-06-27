@@ -1,0 +1,296 @@
+[0.061s] Invoking command in '/home/gabi/Desktop/Handjob_ws/build/leap_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gabi/Desktop/Handjob_ws/src/leap_node -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/gabi/Desktop/Handjob_ws/install/leap_node
+[0.127s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.724s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.794s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.821s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.866s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.929s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.192s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.204s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.492s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.635s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.793s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.190s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[2.311s] -- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[2.430s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[2.623s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[5.817s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[8.874s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.121s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.136s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[10.713s] -- Found PythonExtra: /usr/bin/python3  
+[12.981s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[13.238s] -- Configuring done (13.2s)
+[13.456s] -- Generating done (0.1s)
+[13.509s] -- Build files have been written to: /home/gabi/Desktop/Handjob_ws/build/leap_node
+[13.575s] Invoked command in '/home/gabi/Desktop/Handjob_ws/build/leap_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gabi/Desktop/Handjob_ws/src/leap_node -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/gabi/Desktop/Handjob_ws/install/leap_node
+[13.575s] Invoking command in '/home/gabi/Desktop/Handjob_ws/build/leap_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/gabi/Desktop/Handjob_ws/build/leap_node -- -j8 -l8
+[13.911s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[13.928s] [  3%] [32mBuilding CXX object CMakeFiles/sample_node.dir/src/Sample.cpp.o[0m
+[13.933s] [  3%] Built target ament_cmake_python_copy_leap_node
+[15.218s] running egg_info
+[15.218s] creating leap_node.egg-info
+[15.318s] writing leap_node.egg-info/PKG-INFO
+[15.318s] writing dependency_links to leap_node.egg-info/dependency_links.txt
+[15.319s] writing top-level names to leap_node.egg-info/top_level.txt
+[15.319s] writing manifest file 'leap_node.egg-info/SOURCES.txt'
+[15.714s] [  3%] Built target leap_node__rosidl_generator_type_description
+[15.849s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[15.870s] reading manifest file 'leap_node.egg-info/SOURCES.txt'
+[15.870s] writing manifest file 'leap_node.egg-info/SOURCES.txt'
+[16.030s] [  7%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[16.117s] [  7%] Built target ament_cmake_python_build_leap_node_egg
+[19.252s] [  8%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/finger_data__description.c.o[0m
+[19.254s] [ 10%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/bone_data__functions.c.o[0m
+[19.303s] [ 12%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/bone_data__description.c.o[0m
+[19.354s] [ 14%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/bone_data__type_support.c.o[0m
+[19.673s] [ 16%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/finger_data__type_support.c.o[0m
+[19.689s] [ 17%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/hand_data__description.c.o[0m
+[19.696s] [ 19%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/hand_data__functions.c.o[0m
+[19.886s] [ 21%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/hand_data__type_support.c.o[0m
+[19.947s] [ 23%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_c.dir/rosidl_generator_c/leap_node/msg/detail/finger_data__functions.c.o[0m
+[20.308s] [ 25%] [32m[1mLinking C shared library libleap_node__rosidl_generator_c.so[0m
+[20.578s] [ 25%] Built target leap_node__rosidl_generator_c
+[21.176s] [ 25%] Built target leap_node__cpp
+[30.346s] [ 26%] [32m[1mLinking CXX executable sample_node[0m
+[30.912s] [ 26%] Built target sample_node
+[30.942s] [ 28%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[31.833s] [ 30%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/leap_node/msg/detail/bone_data__type_support.cpp.o[0m
+[32.529s] [ 32%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/leap_node/msg/detail/hand_data__type_support.cpp.o[0m
+[33.318s] [ 33%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/leap_node/msg/detail/finger_data__type_support.cpp.o[0m
+[34.015s] [ 35%] [32m[1mLinking CXX shared library libleap_node__rosidl_typesupport_introspection_cpp.so[0m
+[34.180s] [ 35%] Built target leap_node__rosidl_typesupport_introspection_cpp
+[34.201s] [ 37%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[34.906s] [ 39%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/leap_node/msg/detail/dds_fastrtps/bone_data__type_support.cpp.o[0m
+[35.616s] [ 41%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/leap_node/msg/detail/dds_fastrtps/hand_data__type_support.cpp.o[0m
+[36.462s] [ 42%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/leap_node/msg/detail/dds_fastrtps/finger_data__type_support.cpp.o[0m
+[37.210s] [ 44%] [32m[1mLinking CXX shared library libleap_node__rosidl_typesupport_fastrtps_cpp.so[0m
+[37.356s] [ 44%] Built target leap_node__rosidl_typesupport_fastrtps_cpp
+[37.370s] [ 46%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[37.814s] [ 48%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/leap_node/msg/bone_data__type_support.cpp.o[0m
+[38.281s] [ 50%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/leap_node/msg/hand_data__type_support.cpp.o[0m
+[38.763s] [ 51%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/leap_node/msg/finger_data__type_support.cpp.o[0m
+[39.226s] [ 53%] [32m[1mLinking CXX shared library libleap_node__rosidl_typesupport_cpp.so[0m
+[39.292s] [ 53%] Built target leap_node__rosidl_typesupport_cpp
+[39.314s] [ 55%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[39.769s] [ 57%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_c.dir/rosidl_typesupport_c/leap_node/msg/bone_data__type_support.cpp.o[0m
+[39.848s] [ 58%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_c.dir/rosidl_typesupport_c/leap_node/msg/hand_data__type_support.cpp.o[0m
+[39.919s] [ 60%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_c.dir/rosidl_typesupport_c/leap_node/msg/finger_data__type_support.cpp.o[0m
+[39.981s] [ 62%] [32m[1mLinking CXX shared library libleap_node__rosidl_typesupport_c.so[0m
+[40.052s] [ 62%] Built target leap_node__rosidl_typesupport_c
+[40.065s] [ 64%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[40.586s] [ 66%] [32mBuilding C object CMakeFiles/leap_node__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/leap_node/msg/detail/bone_data__type_support.c.o[0m
+[40.670s] [ 67%] [32mBuilding C object CMakeFiles/leap_node__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/leap_node/msg/detail/hand_data__type_support.c.o[0m
+[40.740s] [ 69%] [32mBuilding C object CMakeFiles/leap_node__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/leap_node/msg/detail/finger_data__type_support.c.o[0m
+[40.798s] [ 71%] [32m[1mLinking C shared library libleap_node__rosidl_typesupport_introspection_c.so[0m
+[40.863s] [ 71%] Built target leap_node__rosidl_typesupport_introspection_c
+[40.889s] [ 73%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[41.550s] [ 75%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/leap_node/msg/detail/bone_data__type_support_c.cpp.o[0m
+[42.242s] [ 76%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/leap_node/msg/detail/hand_data__type_support_c.cpp.o[0m
+[42.928s] [ 78%] [32mBuilding CXX object CMakeFiles/leap_node__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/leap_node/msg/detail/finger_data__type_support_c.cpp.o[0m
+[43.683s] [ 80%] [32m[1mLinking CXX shared library libleap_node__rosidl_typesupport_fastrtps_c.so[0m
+[43.777s] [ 80%] Built target leap_node__rosidl_typesupport_fastrtps_c
+[43.811s] [ 80%] Built target leap_node
+[43.859s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[44.727s] [ 82%] Built target leap_node__py
+[44.769s] [ 83%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_py.dir/rosidl_generator_py/leap_node/msg/_bone_data_s.c.o[0m
+[44.974s] [ 85%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_py.dir/rosidl_generator_py/leap_node/msg/_hand_data_s.c.o[0m
+[45.175s] [ 87%] [32mBuilding C object CMakeFiles/leap_node__rosidl_generator_py.dir/rosidl_generator_py/leap_node/msg/_finger_data_s.c.o[0m
+[45.374s] [ 89%] [32m[1mLinking C shared library libleap_node__rosidl_generator_py.so[0m
+[45.448s] [ 89%] Built target leap_node__rosidl_generator_py
+[45.485s] [ 91%] [32mBuilding C object CMakeFiles/leap_node_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/leap_node/_leap_node_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[45.659s] [ 92%] [32m[1mLinking C shared module rosidl_generator_py/leap_node/leap_node_s__rosidl_typesupport_fastrtps_c.so[0m
+[45.703s] [ 92%] Built target leap_node_s__rosidl_typesupport_fastrtps_c
+[45.741s] [ 94%] [32mBuilding C object CMakeFiles/leap_node_s__rosidl_typesupport_c.dir/rosidl_generator_py/leap_node/_leap_node_s.ep.rosidl_typesupport_c.c.o[0m
+[45.905s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/leap_node/leap_node_s__rosidl_typesupport_c.so[0m
+[45.963s] [ 96%] Built target leap_node_s__rosidl_typesupport_c
+[46.011s] [ 98%] [32mBuilding C object CMakeFiles/leap_node_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/leap_node/_leap_node_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[46.200s] [100%] [32m[1mLinking C shared module rosidl_generator_py/leap_node/leap_node_s__rosidl_typesupport_introspection_c.so[0m
+[46.264s] [100%] Built target leap_node_s__rosidl_typesupport_introspection_c
+[46.282s] Invoked command in '/home/gabi/Desktop/Handjob_ws/build/leap_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/gabi/Desktop/Handjob_ws/build/leap_node -- -j8 -l8
+[46.290s] Invoking command in '/home/gabi/Desktop/Handjob_ws/build/leap_node': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/gabi/Desktop/Handjob_ws/build/leap_node
+[46.301s] -- Install configuration: ""
+[46.301s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/ament_index/resource_index/rosidl_interfaces/leap_node
+[46.302s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/BoneData.json
+[46.302s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/FingerData.json
+[46.302s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/HandData.json
+[46.302s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node
+[46.303s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg
+[46.303s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/rosidl_generator_c__visibility_control.h
+[46.303s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/finger_data.h
+[46.303s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail
+[46.304s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__functions.h
+[46.304s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__struct.h
+[46.304s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__description.c
+[46.304s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__functions.c
+[46.304s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__struct.h
+[46.304s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__functions.c
+[46.305s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__struct.h
+[46.305s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__type_support.c
+[46.305s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__type_support.h
+[46.305s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__functions.h
+[46.306s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__type_support.c
+[46.306s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__description.c
+[46.306s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__functions.h
+[46.306s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__type_support.h
+[46.306s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__type_support.h
+[46.306s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__functions.c
+[46.307s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__description.c
+[46.307s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__type_support.c
+[46.307s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/bone_data.h
+[46.307s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/hand_data.h
+[46.307s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/library_path.sh
+[46.307s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/library_path.dsv
+[46.308s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_generator_c.so
+[46.308s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_generator_c.so" to ""
+[46.308s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node
+[46.308s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg
+[46.308s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[46.309s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail
+[46.309s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__rosidl_typesupport_fastrtps_c.h
+[46.309s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__rosidl_typesupport_fastrtps_c.h
+[46.309s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__rosidl_typesupport_fastrtps_c.h
+[46.309s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_fastrtps_c.so
+[46.310s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_fastrtps_c.so" to ""
+[46.310s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node
+[46.310s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg
+[46.310s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/hand_data.hpp
+[46.310s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail
+[46.311s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__builder.hpp
+[46.311s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__traits.hpp
+[46.311s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__traits.hpp
+[46.311s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__struct.hpp
+[46.311s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__struct.hpp
+[46.311s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__struct.hpp
+[46.312s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__traits.hpp
+[46.312s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__builder.hpp
+[46.312s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__type_support.hpp
+[46.312s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__type_support.hpp
+[46.313s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__builder.hpp
+[46.319s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__type_support.hpp
+[46.319s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/bone_data.hpp
+[46.320s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/finger_data.hpp
+[46.320s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/rosidl_generator_cpp__visibility_control.hpp
+[46.320s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node
+[46.320s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg
+[46.321s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail
+[46.321s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__rosidl_typesupport_fastrtps_cpp.hpp
+[46.321s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__rosidl_typesupport_fastrtps_cpp.hpp
+[46.321s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__rosidl_typesupport_fastrtps_cpp.hpp
+[46.321s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/dds_fastrtps
+[46.322s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[46.322s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_fastrtps_cpp.so
+[46.322s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_fastrtps_cpp.so" to ""
+[46.322s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node
+[46.322s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg
+[46.323s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail
+[46.323s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__rosidl_typesupport_introspection_c.h
+[46.323s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__rosidl_typesupport_introspection_c.h
+[46.323s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__rosidl_typesupport_introspection_c.h
+[46.323s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__type_support.c
+[46.324s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__type_support.c
+[46.324s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__type_support.c
+[46.324s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[46.324s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_introspection_c.so
+[46.324s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_introspection_c.so" to ""
+[46.325s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_c.so
+[46.325s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_c.so" to ""
+[46.325s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node
+[46.325s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg
+[46.325s] -- Up-to-date: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail
+[46.326s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__type_support.cpp
+[46.326s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__type_support.cpp
+[46.326s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__rosidl_typesupport_introspection_cpp.hpp
+[46.326s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/hand_data__rosidl_typesupport_introspection_cpp.hpp
+[46.326s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/finger_data__rosidl_typesupport_introspection_cpp.hpp
+[46.327s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/include/leap_node/leap_node/msg/detail/bone_data__type_support.cpp
+[46.327s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_introspection_cpp.so
+[46.327s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_introspection_cpp.so" to ""
+[46.327s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_cpp.so
+[46.327s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_typesupport_cpp.so" to ""
+[46.327s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/pythonpath.sh
+[46.328s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/pythonpath.dsv
+[46.328s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node-0.0.1-py3.12.egg-info
+[46.328s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node-0.0.1-py3.12.egg-info/dependency_links.txt
+[46.328s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node-0.0.1-py3.12.egg-info/PKG-INFO
+[46.328s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node-0.0.1-py3.12.egg-info/top_level.txt
+[46.328s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node-0.0.1-py3.12.egg-info/SOURCES.txt
+[46.329s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node
+[46.329s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_introspection_c.so
+[46.329s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/__init__.py
+[46.329s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_fastrtps_c.so
+[46.329s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/_leap_node_s.ep.rosidl_typesupport_introspection_c.c
+[46.329s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/_leap_node_s.ep.rosidl_typesupport_c.c
+[46.330s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg
+[46.330s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/__init__.py
+[46.330s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_finger_data.py
+[46.330s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_bone_data.py
+[46.330s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_bone_data_s.c
+[46.330s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_hand_data_s.c
+[46.331s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_finger_data_s.c
+[46.331s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_hand_data.py
+[46.331s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_c.so
+[46.331s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/_leap_node_s.ep.rosidl_typesupport_fastrtps_c.c
+[46.398s] Listing '/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node'...
+[46.399s] Compiling '/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/__init__.py'...
+[46.399s] Listing '/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg'...
+[46.399s] Compiling '/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/__init__.py'...
+[46.399s] Compiling '/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_bone_data.py'...
+[46.399s] Compiling '/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_finger_data.py'...
+[46.400s] Compiling '/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/msg/_hand_data.py'...
+[46.414s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_fastrtps_c.so
+[46.414s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_fastrtps_c.so" to ""
+[46.414s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_introspection_c.so
+[46.415s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_introspection_c.so" to ""
+[46.416s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_c.so
+[46.416s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/python3.12/site-packages/leap_node/leap_node_s__rosidl_typesupport_c.so" to ""
+[46.416s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_generator_py.so
+[46.416s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/libleap_node__rosidl_generator_py.so" to ""
+[46.417s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/BoneData.idl
+[46.417s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/FingerData.idl
+[46.417s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/HandData.idl
+[46.417s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/BoneData.msg
+[46.417s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/FingerData.msg
+[46.417s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/HandData.msg
+[46.418s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/leap_node/sample_node
+[46.420s] -- Set non-toolchain portion of runtime path of "/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/leap_node/sample_node" to "/home/gabi/Desktop/Handjob_ws/src/leap_node/LeapSDK/lib/x64"
+[46.420s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/ament_index/resource_index/package_run_dependencies/leap_node
+[46.420s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/ament_index/resource_index/parent_prefix_path/leap_node
+[46.421s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/ament_prefix_path.sh
+[46.421s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/ament_prefix_path.dsv
+[46.421s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/path.sh
+[46.421s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/environment/path.dsv
+[46.422s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/local_setup.bash
+[46.422s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/local_setup.sh
+[46.422s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/local_setup.zsh
+[46.422s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/local_setup.dsv
+[46.423s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/package.dsv
+[46.423s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/ament_index/resource_index/packages/leap_node
+[46.423s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_generator_cExport.cmake
+[46.424s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_generator_cExport-noconfig.cmake
+[46.424s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_typesupport_fastrtps_cExport.cmake
+[46.424s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[46.424s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_generator_cppExport.cmake
+[46.424s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_typesupport_fastrtps_cppExport.cmake
+[46.425s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[46.425s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_introspection_cExport.cmake
+[46.425s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[46.425s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_cExport.cmake
+[46.426s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_cExport-noconfig.cmake
+[46.426s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_introspection_cppExport.cmake
+[46.426s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[46.426s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_cppExport.cmake
+[46.427s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_node__rosidl_typesupport_cppExport-noconfig.cmake
+[46.427s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_generator_pyExport.cmake
+[46.427s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/export_leap_node__rosidl_generator_pyExport-noconfig.cmake
+[46.427s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/rosidl_cmake-extras.cmake
+[46.427s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[46.428s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[46.428s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/ament_cmake_export_libraries-extras.cmake
+[46.428s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/ament_cmake_export_targets-extras.cmake
+[46.428s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[46.429s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[46.429s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_nodeConfig.cmake
+[46.429s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/cmake/leap_nodeConfig-version.cmake
+[46.429s] -- Installing: /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/package.xml
+[46.441s] Invoked command in '/home/gabi/Desktop/Handjob_ws/build/leap_node' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/gabi/Desktop/Handjob_ws/build/leap_node

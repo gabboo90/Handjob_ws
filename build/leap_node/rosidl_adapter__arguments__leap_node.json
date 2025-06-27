@@ -1,0 +1,8 @@
+{
+  "package_name": "leap_node",
+  "non_idl_tuples": [
+    "/home/gabi/Desktop/Handjob_ws/src/leap_node:msg/BoneData.msg",
+    "/home/gabi/Desktop/Handjob_ws/src/leap_node:msg/FingerData.msg",
+    "/home/gabi/Desktop/Handjob_ws/src/leap_node:msg/HandData.msg"
+  ]
+}

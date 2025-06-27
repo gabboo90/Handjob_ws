@@ -1,0 +1,2 @@
+source;share/scservo_ros/environment/ament_prefix_path.sh
+source;share/scservo_ros/environment/path.sh

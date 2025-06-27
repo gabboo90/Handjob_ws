@@ -1,0 +1,55 @@
+[0.056s] Invoking command in '/home/gabi/Desktop/Handjob_ws/build/scservo_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gabi/Desktop/Handjob_ws/src/scservo_ros -DCMAKE_INSTALL_PREFIX=/home/gabi/Desktop/Handjob_ws/install/scservo_ros
+[0.101s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.790s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.823s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.902s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.925s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.956s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.018s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.330s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.344s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.739s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.902s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.186s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.996s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[3.717s] -- Configuring done (3.6s)
+[3.801s] -- Generating done (0.0s)
+[3.810s] -- Build files have been written to: /home/gabi/Desktop/Handjob_ws/build/scservo_ros
+[3.861s] Invoked command in '/home/gabi/Desktop/Handjob_ws/build/scservo_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gabi/Desktop/Handjob_ws/src/scservo_ros -DCMAKE_INSTALL_PREFIX=/home/gabi/Desktop/Handjob_ws/install/scservo_ros
+[3.863s] Invoking command in '/home/gabi/Desktop/Handjob_ws/build/scservo_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/gabi/Desktop/Handjob_ws/build/scservo_ros -- -j8 -l8
+[4.099s] [  9%] [32mBuilding CXX object CMakeFiles/SCServo.dir/src/SCS.cpp.o[0m
+[4.099s] [ 18%] [32mBuilding CXX object CMakeFiles/SCServo.dir/src/SCSCL.cpp.o[0m
+[4.099s] [ 27%] [32mBuilding CXX object CMakeFiles/SCServo.dir/src/SMS_STS.cpp.o[0m
+[4.113s] [ 36%] [32mBuilding CXX object CMakeFiles/SCServo.dir/src/SCSerial.cpp.o[0m
+[4.113s] [ 45%] [32mBuilding CXX object CMakeFiles/SCServo.dir/src/SMSBL.cpp.o[0m
+[4.113s] [ 54%] [32mBuilding CXX object CMakeFiles/SCServo.dir/src/SMSCL.cpp.o[0m
+[4.377s] [ 63%] [32m[1mLinking CXX static library libSCServo.a[0m
+[4.498s] [ 63%] Built target SCServo
+[4.576s] [ 72%] [32mBuilding CXX object CMakeFiles/Ping.dir/src/examples/SMS_STS/Ping/Ping.cpp.o[0m
+[4.583s] [ 81%] [32mBuilding CXX object CMakeFiles/WritePos.dir/src/examples/SMS_STS/WritePos/WritePos.cpp.o[0m
+[5.649s] [ 90%] [32m[1mLinking CXX executable Ping[0m
+[6.030s] [ 90%] Built target Ping
+[6.030s] [100%] [32m[1mLinking CXX executable WritePos[0m
+[6.392s] [100%] Built target WritePos
+[6.441s] Invoked command in '/home/gabi/Desktop/Handjob_ws/build/scservo_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/gabi/Desktop/Handjob_ws/build/scservo_ros -- -j8 -l8
+[6.443s] Invoking command in '/home/gabi/Desktop/Handjob_ws/build/scservo_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/gabi/Desktop/Handjob_ws/build/scservo_ros
+[6.470s] -- Install configuration: ""
+[6.471s] -- Execute custom install script
+[6.472s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/lib/scservo_ros/Ping
+[6.498s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/lib/scservo_ros/WritePos
+[6.536s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/ament_index/resource_index/package_run_dependencies/scservo_ros
+[6.565s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/ament_index/resource_index/parent_prefix_path/scservo_ros
+[6.592s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/ament_prefix_path.sh
+[6.628s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/ament_prefix_path.dsv
+[6.645s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/path.sh
+[6.680s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/path.dsv
+[6.706s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.bash
+[6.738s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.sh
+[6.775s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.zsh
+[6.802s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.dsv
+[6.837s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/package.dsv
+[6.877s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/ament_index/resource_index/packages/scservo_ros
+[6.908s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/cmake/scservo_rosConfig.cmake
+[6.936s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/cmake/scservo_rosConfig-version.cmake
+[6.976s] -- Symlinking: /home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/package.xml
+[7.028s] Invoked command in '/home/gabi/Desktop/Handjob_ws/build/scservo_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/gabi/Desktop/Handjob_ws/build/scservo_ros

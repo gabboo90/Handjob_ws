@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/gabi/Desktop/Handjob_ws/build/scservo_ros/Ping" "/home/gabi/Desktop/Handjob_ws/build/scservo_ros/WritePos" "TARGETS" "Ping" "WritePos" "RUNTIME_DESTINATION" "lib/scservo_ros")

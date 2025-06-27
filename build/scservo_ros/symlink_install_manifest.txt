@@ -1,0 +1,17 @@
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/lib/scservo_ros/Ping
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/lib/scservo_ros/WritePos
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/ament_index/resource_index/package_run_dependencies/scservo_ros
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/ament_index/resource_index/parent_prefix_path/scservo_ros
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/ament_prefix_path.sh
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/ament_prefix_path.dsv
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/path.sh
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/environment/path.dsv
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.bash
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.sh
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.zsh
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/local_setup.dsv
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/package.dsv
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/ament_index/resource_index/packages/scservo_ros
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/cmake/scservo_rosConfig.cmake
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/cmake/scservo_rosConfig-version.cmake
+/home/gabi/Desktop/Handjob_ws/install/scservo_ros/share/scservo_ros/package.xml

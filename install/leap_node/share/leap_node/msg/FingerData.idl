@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from leap_node/msg/FingerData.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "leap_node/msg/BoneData.idl"
+
+module leap_node {
+  module msg {
+    struct FingerData {
+      builtin_interfaces::msg::Time timestamp;
+
+      int32 finger_type;
+
+      float length;
+
+      float width;
+
+      sequence<leap_node::msg::BoneData> bones;
+    };
+  };
+};

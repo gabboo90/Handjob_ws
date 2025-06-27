@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "leap_node__py",
+		"source" : "/home/gabi/Desktop/Handjob_ws/build/leap_node/leap_node__py"
+	}
+}

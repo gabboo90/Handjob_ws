@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSCServo.a CMakeFiles/SCServo.dir/src/SCS.cpp.o CMakeFiles/SCServo.dir/src/SCSCL.cpp.o CMakeFiles/SCServo.dir/src/SCSerial.cpp.o CMakeFiles/SCServo.dir/src/SMSBL.cpp.o CMakeFiles/SCServo.dir/src/SMSCL.cpp.o CMakeFiles/SCServo.dir/src/SMS_STS.cpp.o
+/usr/bin/ranlib libSCServo.a

@@ -1,0 +1,4 @@
+source;share/scservo_ros/local_setup.bash
+source;share/scservo_ros/local_setup.dsv
+source;share/scservo_ros/local_setup.sh
+source;share/scservo_ros/local_setup.zsh

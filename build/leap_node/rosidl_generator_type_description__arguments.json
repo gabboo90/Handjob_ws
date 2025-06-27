@@ -1,0 +1,14 @@
+{
+  "package_name": "leap_node",
+  "output_dir": "/home/gabi/Desktop/Handjob_ws/build/leap_node/rosidl_generator_type_description/leap_node",
+  "idl_tuples": [
+    "/home/gabi/Desktop/Handjob_ws/build/leap_node/rosidl_adapter/leap_node:msg/BoneData.idl",
+    "/home/gabi/Desktop/Handjob_ws/build/leap_node/rosidl_adapter/leap_node:msg/FingerData.idl",
+    "/home/gabi/Desktop/Handjob_ws/build/leap_node/rosidl_adapter/leap_node:msg/HandData.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs"
+  ]
+}
