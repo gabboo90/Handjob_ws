@@ -83,7 +83,7 @@ void resize_function__FingerData__bones(void * untyped_member, size_t size)
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember FingerData_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember FingerData_message_member_array[7] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -157,6 +157,42 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember FingerData_me
     nullptr  // resize(index) function pointer
   },
   {
+    "mcp_pitch_deg",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node::msg::FingerData, mcp_pitch_deg),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "mcp_yaw_deg",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node::msg::FingerData, mcp_yaw_deg),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
     "bones",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
@@ -179,7 +215,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember FingerData_me
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers FingerData_message_members = {
   "leap_node::msg",  // message namespace
   "FingerData",  // message name
-  5,  // number of fields
+  7,  // number of fields
   sizeof(leap_node::msg::FingerData),
   false,  // has_any_key_member_
   FingerData_message_member_array,  // message members

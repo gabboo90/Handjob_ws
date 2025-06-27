@@ -11,10 +11,10 @@ leap_node__msg__HandData__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xa8, 0x76, 0x94, 0x34, 0xa3, 0xa1, 0xa2, 0x17,
-      0x05, 0xd1, 0x8e, 0x7e, 0x7e, 0xf6, 0xc4, 0x11,
-      0x88, 0x39, 0x8b, 0xb6, 0xee, 0xe0, 0x1e, 0x8b,
-      0x20, 0x02, 0xf8, 0x78, 0x0a, 0x91, 0x47, 0x32,
+      0x7d, 0xfd, 0xee, 0x75, 0x28, 0x88, 0x7e, 0x68,
+      0x9a, 0xb6, 0xeb, 0xfd, 0x39, 0xef, 0x00, 0x2d,
+      0x9f, 0xdf, 0x90, 0x35, 0xa6, 0x9b, 0x66, 0xca,
+      0xfe, 0xea, 0x23, 0xd1, 0xfc, 0x35, 0x8d, 0x67,
     }};
   return &hash;
 }
@@ -23,11 +23,11 @@ leap_node__msg__HandData__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "builtin_interfaces/msg/detail/time__functions.h"
-#include "leap_node/msg/detail/bone_data__functions.h"
-#include "geometry_msgs/msg/detail/vector3__functions.h"
-#include "leap_node/msg/detail/finger_data__functions.h"
 #include "geometry_msgs/msg/detail/point__functions.h"
+#include "geometry_msgs/msg/detail/vector3__functions.h"
+#include "leap_node/msg/detail/bone_data__functions.h"
+#include "builtin_interfaces/msg/detail/time__functions.h"
+#include "leap_node/msg/detail/finger_data__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG
@@ -56,10 +56,10 @@ static const rosidl_type_hash_t leap_node__msg__BoneData__EXPECTED_HASH = {1, {
     0xd6, 0xeb, 0x16, 0x30, 0x95, 0x12, 0x02, 0x97,
   }};
 static const rosidl_type_hash_t leap_node__msg__FingerData__EXPECTED_HASH = {1, {
-    0x48, 0x27, 0x55, 0xd0, 0x5d, 0xdd, 0x92, 0x05,
-    0x66, 0x78, 0x15, 0x40, 0x7e, 0x4e, 0x58, 0x55,
-    0xf7, 0x07, 0x6e, 0xb7, 0x9a, 0x16, 0x92, 0x25,
-    0x75, 0x10, 0x67, 0xfd, 0x20, 0x92, 0x2a, 0xc3,
+    0xc4, 0xf4, 0x40, 0x1e, 0x02, 0x0e, 0xc6, 0x79,
+    0x8d, 0xc2, 0xf4, 0x05, 0xc3, 0xbd, 0x50, 0x78,
+    0x85, 0xeb, 0x6d, 0xce, 0x22, 0x71, 0x52, 0x85,
+    0x3a, 0xf5, 0xf9, 0xfc, 0x7b, 0x4d, 0xcc, 0x54,
   }};
 #endif
 
@@ -77,7 +77,9 @@ static char leap_node__msg__HandData__FIELD_NAME__is_right[] = "is_right";
 static char leap_node__msg__HandData__FIELD_NAME__palm_position[] = "palm_position";
 static char leap_node__msg__HandData__FIELD_NAME__normal[] = "normal";
 static char leap_node__msg__HandData__FIELD_NAME__direction[] = "direction";
-static char leap_node__msg__HandData__FIELD_NAME__fingers[] = "fingers";
+static char leap_node__msg__HandData__FIELD_NAME__thumb[] = "thumb";
+static char leap_node__msg__HandData__FIELD_NAME__index[] = "index";
+static char leap_node__msg__HandData__FIELD_NAME__middle[] = "middle";
 
 static rosidl_runtime_c__type_description__Field leap_node__msg__HandData__FIELDS[] = {
   {
@@ -141,9 +143,29 @@ static rosidl_runtime_c__type_description__Field leap_node__msg__HandData__FIELD
     {NULL, 0, 0},
   },
   {
-    {leap_node__msg__HandData__FIELD_NAME__fingers, 7, 7},
+    {leap_node__msg__HandData__FIELD_NAME__thumb, 5, 5},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_NESTED_TYPE_UNBOUNDED_SEQUENCE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_NESTED_TYPE,
+      0,
+      0,
+      {leap_node__msg__FingerData__TYPE_NAME, 24, 24},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {leap_node__msg__HandData__FIELD_NAME__index, 5, 5},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_NESTED_TYPE,
+      0,
+      0,
+      {leap_node__msg__FingerData__TYPE_NAME, 24, 24},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {leap_node__msg__HandData__FIELD_NAME__middle, 6, 6},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_NESTED_TYPE,
       0,
       0,
       {leap_node__msg__FingerData__TYPE_NAME, 24, 24},
@@ -184,7 +206,7 @@ leap_node__msg__HandData__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {leap_node__msg__HandData__TYPE_NAME, 22, 22},
-      {leap_node__msg__HandData__FIELDS, 7, 7},
+      {leap_node__msg__HandData__FIELDS, 9, 9},
     },
     {leap_node__msg__HandData__REFERENCED_TYPE_DESCRIPTIONS, 5, 5},
   };
@@ -211,7 +233,10 @@ static char toplevel_type_raw_source[] =
   "geometry_msgs/Point palm_position\n"
   "geometry_msgs/Vector3 normal\n"
   "geometry_msgs/Vector3 direction\n"
-  "leap_node/FingerData[] fingers";
+  "# HandData.msg\n"
+  "leap_node/FingerData thumb\n"
+  "leap_node/FingerData index\n"
+  "leap_node/FingerData middle";
 
 static char msg_encoding[] = "msg";
 
@@ -225,7 +250,7 @@ leap_node__msg__HandData__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {leap_node__msg__HandData__TYPE_NAME, 22, 22},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 188, 188},
+    {toplevel_type_raw_source, 254, 254},
   };
   return &source;
 }

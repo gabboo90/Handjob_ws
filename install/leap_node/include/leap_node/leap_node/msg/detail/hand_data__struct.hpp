@@ -26,7 +26,9 @@
 // Member 'normal'
 // Member 'direction'
 #include "geometry_msgs/msg/detail/vector3__struct.hpp"
-// Member 'fingers'
+// Member 'thumb'
+// Member 'index'
+// Member 'middle'
 #include "leap_node/msg/detail/finger_data__struct.hpp"
 
 #ifndef _WIN32
@@ -51,7 +53,10 @@ struct HandData_
   : timestamp(_init),
     palm_position(_init),
     normal(_init),
-    direction(_init)
+    direction(_init),
+    thumb(_init),
+    index(_init),
+    middle(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -65,7 +70,10 @@ struct HandData_
   : timestamp(_alloc, _init),
     palm_position(_alloc, _init),
     normal(_alloc, _init),
-    direction(_alloc, _init)
+    direction(_alloc, _init),
+    thumb(_alloc, _init),
+    index(_alloc, _init),
+    middle(_alloc, _init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -94,9 +102,15 @@ struct HandData_
   using _direction_type =
     geometry_msgs::msg::Vector3_<ContainerAllocator>;
   _direction_type direction;
-  using _fingers_type =
-    std::vector<leap_node::msg::FingerData_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<leap_node::msg::FingerData_<ContainerAllocator>>>;
-  _fingers_type fingers;
+  using _thumb_type =
+    leap_node::msg::FingerData_<ContainerAllocator>;
+  _thumb_type thumb;
+  using _index_type =
+    leap_node::msg::FingerData_<ContainerAllocator>;
+  _index_type index;
+  using _middle_type =
+    leap_node::msg::FingerData_<ContainerAllocator>;
+  _middle_type middle;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -135,10 +149,22 @@ struct HandData_
     this->direction = _arg;
     return *this;
   }
-  Type & set__fingers(
-    const std::vector<leap_node::msg::FingerData_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<leap_node::msg::FingerData_<ContainerAllocator>>> & _arg)
+  Type & set__thumb(
+    const leap_node::msg::FingerData_<ContainerAllocator> & _arg)
   {
-    this->fingers = _arg;
+    this->thumb = _arg;
+    return *this;
+  }
+  Type & set__index(
+    const leap_node::msg::FingerData_<ContainerAllocator> & _arg)
+  {
+    this->index = _arg;
+    return *this;
+  }
+  Type & set__middle(
+    const leap_node::msg::FingerData_<ContainerAllocator> & _arg)
+  {
+    this->middle = _arg;
     return *this;
   }
 
@@ -202,7 +228,13 @@ struct HandData_
     if (this->direction != other.direction) {
       return false;
     }
-    if (this->fingers != other.fingers) {
+    if (this->thumb != other.thumb) {
+      return false;
+    }
+    if (this->index != other.index) {
+      return false;
+    }
+    if (this->middle != other.middle) {
       return false;
     }
     return true;

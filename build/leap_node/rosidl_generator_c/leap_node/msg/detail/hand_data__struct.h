@@ -27,7 +27,9 @@ extern "C"
 // Member 'normal'
 // Member 'direction'
 #include "geometry_msgs/msg/detail/vector3__struct.h"
-// Member 'fingers'
+// Member 'thumb'
+// Member 'index'
+// Member 'middle'
 #include "leap_node/msg/detail/finger_data__struct.h"
 
 /// Struct defined in msg/HandData in the package leap_node.
@@ -39,7 +41,10 @@ typedef struct leap_node__msg__HandData
   geometry_msgs__msg__Point palm_position;
   geometry_msgs__msg__Vector3 normal;
   geometry_msgs__msg__Vector3 direction;
-  leap_node__msg__FingerData__Sequence fingers;
+  /// HandData.msg
+  leap_node__msg__FingerData thumb;
+  leap_node__msg__FingerData index;
+  leap_node__msg__FingerData middle;
 } leap_node__msg__HandData;
 
 // Struct for a sequence of leap_node__msg__HandData.

@@ -96,7 +96,7 @@ bool leap_node__msg__FingerData__rosidl_typesupport_introspection_c__resize_func
   return leap_node__msg__BoneData__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_member_array[7] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -170,6 +170,42 @@ static rosidl_typesupport_introspection_c__MessageMember leap_node__msg__FingerD
     NULL  // resize(index) function pointer
   },
   {
+    "mcp_pitch_deg",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node__msg__FingerData, mcp_pitch_deg),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "mcp_yaw_deg",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node__msg__FingerData, mcp_yaw_deg),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
     "bones",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
@@ -192,7 +228,7 @@ static rosidl_typesupport_introspection_c__MessageMember leap_node__msg__FingerD
 static const rosidl_typesupport_introspection_c__MessageMembers leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_members = {
   "leap_node__msg",  // message namespace
   "FingerData",  // message name
-  5,  // number of fields
+  7,  // number of fields
   sizeof(leap_node__msg__FingerData),
   false,  // has_any_key_member_
   leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_member_array,  // message members
@@ -216,7 +252,7 @@ const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, leap_node, msg, FingerData)() {
   leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
-  leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_member_array[4].members_ =
+  leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, leap_node, msg, BoneData)();
   if (!leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_type_support_handle.typesupport_identifier) {
     leap_node__msg__FingerData__rosidl_typesupport_introspection_c__FingerData_message_type_support_handle.typesupport_identifier =

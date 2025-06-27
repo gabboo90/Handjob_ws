@@ -51,6 +51,8 @@ struct FingerData_
       this->finger_type = 0l;
       this->length = 0.0f;
       this->width = 0.0f;
+      this->mcp_pitch_deg = 0.0;
+      this->mcp_yaw_deg = 0.0;
     }
   }
 
@@ -63,6 +65,8 @@ struct FingerData_
       this->finger_type = 0l;
       this->length = 0.0f;
       this->width = 0.0f;
+      this->mcp_pitch_deg = 0.0;
+      this->mcp_yaw_deg = 0.0;
     }
   }
 
@@ -79,6 +83,12 @@ struct FingerData_
   using _width_type =
     float;
   _width_type width;
+  using _mcp_pitch_deg_type =
+    double;
+  _mcp_pitch_deg_type mcp_pitch_deg;
+  using _mcp_yaw_deg_type =
+    double;
+  _mcp_yaw_deg_type mcp_yaw_deg;
   using _bones_type =
     std::vector<leap_node::msg::BoneData_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<leap_node::msg::BoneData_<ContainerAllocator>>>;
   _bones_type bones;
@@ -106,6 +116,18 @@ struct FingerData_
     const float & _arg)
   {
     this->width = _arg;
+    return *this;
+  }
+  Type & set__mcp_pitch_deg(
+    const double & _arg)
+  {
+    this->mcp_pitch_deg = _arg;
+    return *this;
+  }
+  Type & set__mcp_yaw_deg(
+    const double & _arg)
+  {
+    this->mcp_yaw_deg = _arg;
     return *this;
   }
   Type & set__bones(
@@ -167,6 +189,12 @@ struct FingerData_
       return false;
     }
     if (this->width != other.width) {
+      return false;
+    }
+    if (this->mcp_pitch_deg != other.mcp_pitch_deg) {
+      return false;
+    }
+    if (this->mcp_yaw_deg != other.mcp_yaw_deg) {
       return false;
     }
     if (this->bones != other.bones) {

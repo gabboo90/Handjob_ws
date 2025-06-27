@@ -16,6 +16,14 @@ module leap_node {
 
       float width;
 
+      @verbatim (language="comment", text=
+        "Beugung/Nicken")
+      double mcp_pitch_deg;
+
+      @verbatim (language="comment", text=
+        "Spreizung/Drehung")
+      double mcp_yaw_deg;
+
       sequence<leap_node::msg::BoneData> bones;
     };
   };

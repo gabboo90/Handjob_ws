@@ -4,4 +4,7 @@ bool is_right
 geometry_msgs/Point palm_position
 geometry_msgs/Vector3 normal
 geometry_msgs/Vector3 direction
-leap_node/FingerData[] fingers
+# HandData.msg
+leap_node/FingerData thumb
+leap_node/FingerData index
+leap_node/FingerData middle

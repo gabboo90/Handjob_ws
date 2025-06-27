@@ -22,7 +22,13 @@ module leap_node {
 
       geometry_msgs::msg::Vector3 direction;
 
-      sequence<leap_node::msg::FingerData> fingers;
+      @verbatim (language="comment", text=
+        "HandData.msg")
+      leap_node::msg::FingerData thumb;
+
+      leap_node::msg::FingerData index;
+
+      leap_node::msg::FingerData middle;
     };
   };
 };

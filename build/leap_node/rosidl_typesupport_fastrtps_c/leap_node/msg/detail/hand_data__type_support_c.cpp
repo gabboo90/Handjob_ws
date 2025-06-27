@@ -39,7 +39,7 @@ extern "C"
 #include "builtin_interfaces/msg/detail/time__functions.h"  // timestamp
 #include "geometry_msgs/msg/detail/point__functions.h"  // palm_position
 #include "geometry_msgs/msg/detail/vector3__functions.h"  // direction, normal
-#include "leap_node/msg/detail/finger_data__functions.h"  // fingers
+#include "leap_node/msg/detail/finger_data__functions.h"  // index, middle, thumb
 
 // forward declare type support functions
 
@@ -242,15 +242,22 @@ bool cdr_serialize_leap_node__msg__HandData(
       &ros_message->direction, cdr);
   }
 
-  // Field name: fingers
+  // Field name: thumb
   {
-    size_t size = ros_message->fingers.size;
-    auto array_ptr = ros_message->fingers.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      cdr_serialize_leap_node__msg__FingerData(
-        &array_ptr[i], cdr);
-    }
+    cdr_serialize_leap_node__msg__FingerData(
+      &ros_message->thumb, cdr);
+  }
+
+  // Field name: index
+  {
+    cdr_serialize_leap_node__msg__FingerData(
+      &ros_message->index, cdr);
+  }
+
+  // Field name: middle
+  {
+    cdr_serialize_leap_node__msg__FingerData(
+      &ros_message->middle, cdr);
   }
 
   return true;
@@ -293,22 +300,19 @@ bool cdr_deserialize_leap_node__msg__HandData(
     cdr_deserialize_geometry_msgs__msg__Vector3(cdr, &ros_message->direction);
   }
 
-  // Field name: fingers
+  // Field name: thumb
   {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->fingers.data) {
-      leap_node__msg__FingerData__Sequence__fini(&ros_message->fingers);
-    }
-    if (!leap_node__msg__FingerData__Sequence__init(&ros_message->fingers, size)) {
-      fprintf(stderr, "failed to create array for field 'fingers'");
-      return false;
-    }
-    auto array_ptr = ros_message->fingers.data;
-    for (size_t i = 0; i < size; ++i) {
-      cdr_deserialize_leap_node__msg__FingerData(cdr, &array_ptr[i]);
-    }
+    cdr_deserialize_leap_node__msg__FingerData(cdr, &ros_message->thumb);
+  }
+
+  // Field name: index
+  {
+    cdr_deserialize_leap_node__msg__FingerData(cdr, &ros_message->index);
+  }
+
+  // Field name: middle
+  {
+    cdr_deserialize_leap_node__msg__FingerData(cdr, &ros_message->middle);
   }
 
   return true;
@@ -359,17 +363,17 @@ size_t get_serialized_size_leap_node__msg__HandData(
   current_alignment += get_serialized_size_geometry_msgs__msg__Vector3(
     &(ros_message->direction), current_alignment);
 
-  // Field name: fingers
-  {
-    size_t array_size = ros_message->fingers.size;
-    auto array_ptr = ros_message->fingers.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_leap_node__msg__FingerData(
-        &array_ptr[index], current_alignment);
-    }
-  }
+  // Field name: thumb
+  current_alignment += get_serialized_size_leap_node__msg__FingerData(
+    &(ros_message->thumb), current_alignment);
+
+  // Field name: index
+  current_alignment += get_serialized_size_leap_node__msg__FingerData(
+    &(ros_message->index), current_alignment);
+
+  // Field name: middle
+  current_alignment += get_serialized_size_leap_node__msg__FingerData(
+    &(ros_message->middle), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -480,13 +484,45 @@ size_t max_serialized_size_leap_node__msg__HandData(
     }
   }
 
-  // Field name: fingers
+  // Field name: thumb
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_leap_node__msg__FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: index
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_leap_node__msg__FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: middle
+  {
+    size_t array_size = 1;
     last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
@@ -511,7 +547,7 @@ size_t max_serialized_size_leap_node__msg__HandData(
     using DataType = leap_node__msg__HandData;
     is_plain =
       (
-      offsetof(DataType, fingers) +
+      offsetof(DataType, middle) +
       last_member_size
       ) == ret_val;
   }
@@ -557,15 +593,22 @@ bool cdr_serialize_key_leap_node__msg__HandData(
       &ros_message->direction, cdr);
   }
 
-  // Field name: fingers
+  // Field name: thumb
   {
-    size_t size = ros_message->fingers.size;
-    auto array_ptr = ros_message->fingers.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      cdr_serialize_key_leap_node__msg__FingerData(
-        &array_ptr[i], cdr);
-    }
+    cdr_serialize_key_leap_node__msg__FingerData(
+      &ros_message->thumb, cdr);
+  }
+
+  // Field name: index
+  {
+    cdr_serialize_key_leap_node__msg__FingerData(
+      &ros_message->index, cdr);
+  }
+
+  // Field name: middle
+  {
+    cdr_serialize_key_leap_node__msg__FingerData(
+      &ros_message->middle, cdr);
   }
 
   return true;
@@ -616,17 +659,17 @@ size_t get_serialized_size_key_leap_node__msg__HandData(
   current_alignment += get_serialized_size_key_geometry_msgs__msg__Vector3(
     &(ros_message->direction), current_alignment);
 
-  // Field name: fingers
-  {
-    size_t array_size = ros_message->fingers.size;
-    auto array_ptr = ros_message->fingers.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_key_leap_node__msg__FingerData(
-        &array_ptr[index], current_alignment);
-    }
-  }
+  // Field name: thumb
+  current_alignment += get_serialized_size_key_leap_node__msg__FingerData(
+    &(ros_message->thumb), current_alignment);
+
+  // Field name: index
+  current_alignment += get_serialized_size_key_leap_node__msg__FingerData(
+    &(ros_message->index), current_alignment);
+
+  // Field name: middle
+  current_alignment += get_serialized_size_key_leap_node__msg__FingerData(
+    &(ros_message->middle), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -735,13 +778,45 @@ size_t max_serialized_size_key_leap_node__msg__HandData(
     }
   }
 
-  // Field name: fingers
+  // Field name: thumb
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_key_leap_node__msg__FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: index
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_key_leap_node__msg__FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: middle
+  {
+    size_t array_size = 1;
     last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
@@ -765,7 +840,7 @@ size_t max_serialized_size_key_leap_node__msg__HandData(
     using DataType = leap_node__msg__HandData;
     is_plain =
       (
-      offsetof(DataType, fingers) +
+      offsetof(DataType, middle) +
       last_member_size
       ) == ret_val;
   }

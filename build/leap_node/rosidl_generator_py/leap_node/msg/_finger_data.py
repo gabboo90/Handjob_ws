@@ -76,6 +76,8 @@ class FingerData(metaclass=Metaclass_FingerData):
         '_finger_type',
         '_length',
         '_width',
+        '_mcp_pitch_deg',
+        '_mcp_yaw_deg',
         '_bones',
         '_check_fields',
     ]
@@ -85,6 +87,8 @@ class FingerData(metaclass=Metaclass_FingerData):
         'finger_type': 'int32',
         'length': 'float',
         'width': 'float',
+        'mcp_pitch_deg': 'double',
+        'mcp_yaw_deg': 'double',
         'bones': 'sequence<leap_node/BoneData>',
     }
 
@@ -95,6 +99,8 @@ class FingerData(metaclass=Metaclass_FingerData):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['leap_node', 'msg'], 'BoneData')),  # noqa: E501
     )
 
@@ -112,6 +118,8 @@ class FingerData(metaclass=Metaclass_FingerData):
         self.finger_type = kwargs.get('finger_type', int())
         self.length = kwargs.get('length', float())
         self.width = kwargs.get('width', float())
+        self.mcp_pitch_deg = kwargs.get('mcp_pitch_deg', float())
+        self.mcp_yaw_deg = kwargs.get('mcp_yaw_deg', float())
         self.bones = kwargs.get('bones', [])
 
     def __repr__(self):
@@ -151,6 +159,10 @@ class FingerData(metaclass=Metaclass_FingerData):
         if self.length != other.length:
             return False
         if self.width != other.width:
+            return False
+        if self.mcp_pitch_deg != other.mcp_pitch_deg:
+            return False
+        if self.mcp_yaw_deg != other.mcp_yaw_deg:
             return False
         if self.bones != other.bones:
             return False
@@ -219,6 +231,36 @@ class FingerData(metaclass=Metaclass_FingerData):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'width' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._width = value
+
+    @builtins.property
+    def mcp_pitch_deg(self):
+        """Message field 'mcp_pitch_deg'."""
+        return self._mcp_pitch_deg
+
+    @mcp_pitch_deg.setter
+    def mcp_pitch_deg(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'mcp_pitch_deg' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'mcp_pitch_deg' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._mcp_pitch_deg = value
+
+    @builtins.property
+    def mcp_yaw_deg(self):
+        """Message field 'mcp_yaw_deg'."""
+        return self._mcp_yaw_deg
+
+    @mcp_yaw_deg.setter
+    def mcp_yaw_deg(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'mcp_yaw_deg' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'mcp_yaw_deg' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._mcp_yaw_deg = value
 
     @builtins.property
     def bones(self):

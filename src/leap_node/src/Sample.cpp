@@ -54,43 +54,45 @@ public:
 
       // === MarkerArray erzeugen ===
       visualization_msgs::msg::MarkerArray marker_array;
+      int marker_id = 0;
 
-      for (int i = 0; i <= 3; ++i) {  // Thumb, Index, Middle, Ring
+      for (int i = 0; i <= 3; ++i) {  // Daumen bis Ringfinger
         const Finger& finger = hand.fingers()[i];
 
-        visualization_msgs::msg::Marker marker;
-        marker.header.stamp = now;
-        marker.header.frame_id = "leap_frame";
-        marker.ns = "finger_" + std::to_string(i);
-        marker.id = i;
-        marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
-        marker.action = visualization_msgs::msg::Marker::ADD;
-        marker.scale.x = 0.005;
-
-        marker.color.r = 1.0;
-        marker.color.g = 0.6 - 0.2 * i;
-        marker.color.b = 0.2 * i;
-        marker.color.a = 1.0;
-
-        // Gelenkpunkte
         for (int bone_type = 0; bone_type < 4; ++bone_type) {
           const Bone& bone = finger.bone(static_cast<Bone::Type>(bone_type));
-          geometry_msgs::msg::Point pt;
-          pt.x = bone.prevJoint().x / 1000.0;
-          pt.y = bone.prevJoint().y / 1000.0;
-          pt.z = bone.prevJoint().z / 1000.0;
-          marker.points.push_back(pt);
+
+          visualization_msgs::msg::Marker arrow;
+          arrow.header.stamp = now;
+          arrow.header.frame_id = "leap_frame";
+          arrow.ns = "finger_arrow_" + std::to_string(i);
+          arrow.id = marker_id++;
+          arrow.type = visualization_msgs::msg::Marker::ARROW;
+          arrow.action = visualization_msgs::msg::Marker::ADD;
+
+          arrow.scale.x = 0.005;  // Schaftdurchmesser
+          arrow.scale.y = 0.01;   // Kopfbreite
+          arrow.scale.z = 0.02;   // Kopflänge
+
+          arrow.color.r = 0.9;
+          arrow.color.g = 0.3 + 0.2 * i;
+          arrow.color.b = 1.0 - 0.2 * i;
+          arrow.color.a = 1.0;
+
+          geometry_msgs::msg::Point start, end;
+          start.x = bone.prevJoint().x / 1000.0;
+          start.y = bone.prevJoint().y / 1000.0;
+          start.z = bone.prevJoint().z / 1000.0;
+
+          end.x = bone.nextJoint().x / 1000.0;
+          end.y = bone.nextJoint().y / 1000.0;
+          end.z = bone.nextJoint().z / 1000.0;
+
+          arrow.points.push_back(start);
+          arrow.points.push_back(end);
+
+          marker_array.markers.push_back(arrow);
         }
-
-        // Fingerspitze (Endpunkt)
-        const Bone& tip = finger.bone(Bone::Type::TYPE_DISTAL);
-        geometry_msgs::msg::Point tip_pt;
-        tip_pt.x = tip.nextJoint().x / 1000.0;
-        tip_pt.y = tip.nextJoint().y / 1000.0;
-        tip_pt.z = tip.nextJoint().z / 1000.0;
-        marker.points.push_back(tip_pt);
-
-        marker_array.markers.push_back(marker);
       }
 
       marker_publisher_->publish(marker_array);

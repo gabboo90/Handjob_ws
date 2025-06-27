@@ -27,9 +27,13 @@
 // Member `normal`
 // Member `direction`
 #include "geometry_msgs/msg/detail/vector3__rosidl_typesupport_introspection_c.h"
-// Member `fingers`
+// Member `thumb`
+// Member `index`
+// Member `middle`
 #include "leap_node/msg/finger_data.h"
-// Member `fingers`
+// Member `thumb`
+// Member `index`
+// Member `middle`
 #include "leap_node/msg/detail/finger_data__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
@@ -51,62 +55,7 @@ void leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_fini
   leap_node__msg__HandData__fini(message_memory);
 }
 
-size_t leap_node__msg__HandData__rosidl_typesupport_introspection_c__size_function__HandData__fingers(
-  const void * untyped_member)
-{
-  const leap_node__msg__FingerData__Sequence * member =
-    (const leap_node__msg__FingerData__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * leap_node__msg__HandData__rosidl_typesupport_introspection_c__get_const_function__HandData__fingers(
-  const void * untyped_member, size_t index)
-{
-  const leap_node__msg__FingerData__Sequence * member =
-    (const leap_node__msg__FingerData__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * leap_node__msg__HandData__rosidl_typesupport_introspection_c__get_function__HandData__fingers(
-  void * untyped_member, size_t index)
-{
-  leap_node__msg__FingerData__Sequence * member =
-    (leap_node__msg__FingerData__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void leap_node__msg__HandData__rosidl_typesupport_introspection_c__fetch_function__HandData__fingers(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const leap_node__msg__FingerData * item =
-    ((const leap_node__msg__FingerData *)
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__get_const_function__HandData__fingers(untyped_member, index));
-  leap_node__msg__FingerData * value =
-    (leap_node__msg__FingerData *)(untyped_value);
-  *value = *item;
-}
-
-void leap_node__msg__HandData__rosidl_typesupport_introspection_c__assign_function__HandData__fingers(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  leap_node__msg__FingerData * item =
-    ((leap_node__msg__FingerData *)
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__get_function__HandData__fingers(untyped_member, index));
-  const leap_node__msg__FingerData * value =
-    (const leap_node__msg__FingerData *)(untyped_value);
-  *item = *value;
-}
-
-bool leap_node__msg__HandData__rosidl_typesupport_introspection_c__resize_function__HandData__fingers(
-  void * untyped_member, size_t size)
-{
-  leap_node__msg__FingerData__Sequence * member =
-    (leap_node__msg__FingerData__Sequence *)(untyped_member);
-  leap_node__msg__FingerData__Sequence__fini(member);
-  return leap_node__msg__FingerData__Sequence__init(member, size);
-}
-
-static rosidl_typesupport_introspection_c__MessageMember leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_member_array[7] = {
+static rosidl_typesupport_introspection_c__MessageMember leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_member_array[9] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -216,29 +165,65 @@ static rosidl_typesupport_introspection_c__MessageMember leap_node__msg__HandDat
     NULL  // resize(index) function pointer
   },
   {
-    "fingers",  // name
+    "thumb",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is key
-    true,  // is array
+    false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(leap_node__msg__HandData, fingers),  // bytes offset in struct
+    offsetof(leap_node__msg__HandData, thumb),  // bytes offset in struct
     NULL,  // default value
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__size_function__HandData__fingers,  // size() function pointer
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__get_const_function__HandData__fingers,  // get_const(index) function pointer
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__get_function__HandData__fingers,  // get(index) function pointer
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__fetch_function__HandData__fingers,  // fetch(index, &value) function pointer
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__assign_function__HandData__fingers,  // assign(index, value) function pointer
-    leap_node__msg__HandData__rosidl_typesupport_introspection_c__resize_function__HandData__fingers  // resize(index) function pointer
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "index",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node__msg__HandData, index),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "middle",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node__msg__HandData, middle),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_members = {
   "leap_node__msg",  // message namespace
   "HandData",  // message name
-  7,  // number of fields
+  9,  // number of fields
   sizeof(leap_node__msg__HandData),
   false,  // has_any_key_member_
   leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_member_array,  // message members
@@ -269,6 +254,10 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
   leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_member_array[5].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Vector3)();
   leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_member_array[6].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, leap_node, msg, FingerData)();
+  leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_member_array[7].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, leap_node, msg, FingerData)();
+  leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_member_array[8].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, leap_node, msg, FingerData)();
   if (!leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_type_support_handle.typesupport_identifier) {
     leap_node__msg__HandData__rosidl_typesupport_introspection_c__HandData_message_type_support_handle.typesupport_identifier =

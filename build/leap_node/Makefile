@@ -419,6 +419,19 @@ sample_node/fast:
 .PHONY : sample_node/fast
 
 #=============================================================================
+# Target rules for targets named dof_publisher_node
+
+# Build rule for target.
+dof_publisher_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dof_publisher_node
+.PHONY : dof_publisher_node
+
+# fast build rule for target.
+dof_publisher_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dof_publisher_node.dir/build.make CMakeFiles/dof_publisher_node.dir/build
+.PHONY : dof_publisher_node/fast
+
+#=============================================================================
 # Target rules for targets named leap_node__py
 
 # Build rule for target.
@@ -1223,6 +1236,30 @@ rosidl_typesupport_introspection_cpp/leap_node/msg/detail/hand_data__type_suppor
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/leap_node__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/leap_node__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/leap_node/msg/detail/hand_data__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/leap_node/msg/detail/hand_data__type_support.cpp.s
 
+src/DOF_publisher_node.o: src/DOF_publisher_node.cpp.o
+.PHONY : src/DOF_publisher_node.o
+
+# target to build an object file
+src/DOF_publisher_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dof_publisher_node.dir/build.make CMakeFiles/dof_publisher_node.dir/src/DOF_publisher_node.cpp.o
+.PHONY : src/DOF_publisher_node.cpp.o
+
+src/DOF_publisher_node.i: src/DOF_publisher_node.cpp.i
+.PHONY : src/DOF_publisher_node.i
+
+# target to preprocess a source file
+src/DOF_publisher_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dof_publisher_node.dir/build.make CMakeFiles/dof_publisher_node.dir/src/DOF_publisher_node.cpp.i
+.PHONY : src/DOF_publisher_node.cpp.i
+
+src/DOF_publisher_node.s: src/DOF_publisher_node.cpp.s
+.PHONY : src/DOF_publisher_node.s
+
+# target to generate assembly for a file
+src/DOF_publisher_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dof_publisher_node.dir/build.make CMakeFiles/dof_publisher_node.dir/src/DOF_publisher_node.cpp.s
+.PHONY : src/DOF_publisher_node.cpp.s
+
 src/Sample.o: src/Sample.cpp.o
 .PHONY : src/Sample.o
 
@@ -1268,6 +1305,7 @@ help:
 	@echo "... leap_node__rosidl_generator_type_description"
 	@echo "... leap_node_uninstall"
 	@echo "... uninstall"
+	@echo "... dof_publisher_node"
 	@echo "... leap_node__rosidl_generator_c"
 	@echo "... leap_node__rosidl_generator_py"
 	@echo "... leap_node__rosidl_typesupport_c"
@@ -1379,6 +1417,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/leap_node/msg/detail/hand_data__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/leap_node/msg/detail/hand_data__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/leap_node/msg/detail/hand_data__type_support.s"
+	@echo "... src/DOF_publisher_node.o"
+	@echo "... src/DOF_publisher_node.i"
+	@echo "... src/DOF_publisher_node.s"
 	@echo "... src/Sample.o"
 	@echo "... src/Sample.i"
 	@echo "... src/Sample.s"

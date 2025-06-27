@@ -161,6 +161,10 @@ max_serialized_size_key_FingerData(
 }  // namespace msg
 }  // namespace leap_node
 
+// functions for leap_node::msg::FingerData already declared above
+
+// functions for leap_node::msg::FingerData already declared above
+
 
 namespace leap_node
 {
@@ -204,16 +208,20 @@ cdr_serialize(
     ros_message.direction,
     cdr);
 
-  // Member: fingers
-  {
-    size_t size = ros_message.fingers.size();
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; i++) {
-      leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize(
-        ros_message.fingers[i],
-        cdr);
-    }
-  }
+  // Member: thumb
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.thumb,
+    cdr);
+
+  // Member: index
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.index,
+    cdr);
+
+  // Member: middle
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.middle,
+    cdr);
 
   return true;
 }
@@ -250,17 +258,17 @@ cdr_deserialize(
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.direction);
 
-  // Member: fingers
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    ros_message.fingers.resize(size);
-    for (size_t i = 0; i < size; i++) {
-      leap_node::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-        cdr, ros_message.fingers[i]);
-    }
-  }
+  // Member: thumb
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.thumb);
+
+  // Member: index
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.index);
+
+  // Member: middle
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.middle);
 
   return true;
 }
@@ -313,17 +321,20 @@ get_serialized_size(
     geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.direction, current_alignment);
 
-  // Member: fingers
-  {
-    size_t array_size = ros_message.fingers.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size(
-        ros_message.fingers[index], current_alignment);
-    }
-  }
+  // Member: thumb
+  current_alignment +=
+    leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.thumb, current_alignment);
+
+  // Member: index
+  current_alignment +=
+    leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.index, current_alignment);
+
+  // Member: middle
+  current_alignment +=
+    leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.middle, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -425,13 +436,41 @@ max_serialized_size_HandData(
       is_plain &= inner_is_plain;
     }
   }
-  // Member: fingers
+  // Member: thumb
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        leap_node::msg::typesupport_fastrtps_cpp::max_serialized_size_FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // Member: index
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        leap_node::msg::typesupport_fastrtps_cpp::max_serialized_size_FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // Member: middle
+  {
+    size_t array_size = 1;
     last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
@@ -454,7 +493,7 @@ max_serialized_size_HandData(
     using DataType = leap_node::msg::HandData;
     is_plain =
       (
-      offsetof(DataType, fingers) +
+      offsetof(DataType, middle) +
       last_member_size
       ) == ret_val;
   }
@@ -494,16 +533,20 @@ cdr_serialize_key(
     ros_message.direction,
     cdr);
 
-  // Member: fingers
-  {
-    size_t size = ros_message.fingers.size();
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; i++) {
-      leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
-        ros_message.fingers[i],
-        cdr);
-    }
-  }
+  // Member: thumb
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
+    ros_message.thumb,
+    cdr);
+
+  // Member: index
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
+    ros_message.index,
+    cdr);
+
+  // Member: middle
+  leap_node::msg::typesupport_fastrtps_cpp::cdr_serialize_key(
+    ros_message.middle,
+    cdr);
 
   return true;
 }
@@ -555,17 +598,20 @@ get_serialized_size_key(
     geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
     ros_message.direction, current_alignment);
 
-  // Member: fingers
-  {
-    size_t array_size = ros_message.fingers.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
-        ros_message.fingers[index], current_alignment);
-    }
-  }
+  // Member: thumb
+  current_alignment +=
+    leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
+    ros_message.thumb, current_alignment);
+
+  // Member: index
+  current_alignment +=
+    leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
+    ros_message.index, current_alignment);
+
+  // Member: middle
+  current_alignment +=
+    leap_node::msg::typesupport_fastrtps_cpp::get_serialized_size_key(
+    ros_message.middle, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -672,13 +718,43 @@ max_serialized_size_key_HandData(
     }
   }
 
-  // Member: fingers
+  // Member: thumb
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        leap_node::msg::typesupport_fastrtps_cpp::max_serialized_size_key_FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: index
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        leap_node::msg::typesupport_fastrtps_cpp::max_serialized_size_key_FingerData(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: middle
+  {
+    size_t array_size = 1;
     last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
       bool inner_full_bounded;
@@ -701,7 +777,7 @@ max_serialized_size_key_HandData(
     using DataType = leap_node::msg::HandData;
     is_plain =
       (
-      offsetof(DataType, fingers) +
+      offsetof(DataType, middle) +
       last_member_size
       ) == ret_val;
   }

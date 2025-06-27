@@ -31,6 +31,8 @@ leap_node__msg__FingerData__init(leap_node__msg__FingerData * msg)
   // finger_type
   // length
   // width
+  // mcp_pitch_deg
+  // mcp_yaw_deg
   // bones
   if (!leap_node__msg__BoneData__Sequence__init(&msg->bones, 0)) {
     leap_node__msg__FingerData__fini(msg);
@@ -50,6 +52,8 @@ leap_node__msg__FingerData__fini(leap_node__msg__FingerData * msg)
   // finger_type
   // length
   // width
+  // mcp_pitch_deg
+  // mcp_yaw_deg
   // bones
   leap_node__msg__BoneData__Sequence__fini(&msg->bones);
 }
@@ -76,6 +80,14 @@ leap_node__msg__FingerData__are_equal(const leap_node__msg__FingerData * lhs, co
   }
   // width
   if (lhs->width != rhs->width) {
+    return false;
+  }
+  // mcp_pitch_deg
+  if (lhs->mcp_pitch_deg != rhs->mcp_pitch_deg) {
+    return false;
+  }
+  // mcp_yaw_deg
+  if (lhs->mcp_yaw_deg != rhs->mcp_yaw_deg) {
     return false;
   }
   // bones
@@ -107,6 +119,10 @@ leap_node__msg__FingerData__copy(
   output->length = input->length;
   // width
   output->width = input->width;
+  // mcp_pitch_deg
+  output->mcp_pitch_deg = input->mcp_pitch_deg;
+  // mcp_yaw_deg
+  output->mcp_yaw_deg = input->mcp_yaw_deg;
   // bones
   if (!leap_node__msg__BoneData__Sequence__copy(
       &(input->bones), &(output->bones)))

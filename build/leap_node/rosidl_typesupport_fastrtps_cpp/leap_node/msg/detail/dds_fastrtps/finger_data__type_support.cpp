@@ -120,6 +120,12 @@ cdr_serialize(
   // Member: width
   cdr << ros_message.width;
 
+  // Member: mcp_pitch_deg
+  cdr << ros_message.mcp_pitch_deg;
+
+  // Member: mcp_yaw_deg
+  cdr << ros_message.mcp_yaw_deg;
+
   // Member: bones
   {
     size_t size = ros_message.bones.size();
@@ -152,6 +158,12 @@ cdr_deserialize(
 
   // Member: width
   cdr >> ros_message.width;
+
+  // Member: mcp_pitch_deg
+  cdr >> ros_message.mcp_pitch_deg;
+
+  // Member: mcp_yaw_deg
+  cdr >> ros_message.mcp_yaw_deg;
 
   // Member: bones
   {
@@ -204,6 +216,20 @@ get_serialized_size(
   // Member: width
   {
     size_t item_size = sizeof(ros_message.width);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: mcp_pitch_deg
+  {
+    size_t item_size = sizeof(ros_message.mcp_pitch_deg);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: mcp_yaw_deg
+  {
+    size_t item_size = sizeof(ros_message.mcp_yaw_deg);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -280,6 +306,20 @@ max_serialized_size_FingerData(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // Member: mcp_pitch_deg
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // Member: mcp_yaw_deg
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
   // Member: bones
   {
     size_t array_size = 0;
@@ -337,6 +377,12 @@ cdr_serialize_key(
   // Member: width
   cdr << ros_message.width;
 
+  // Member: mcp_pitch_deg
+  cdr << ros_message.mcp_pitch_deg;
+
+  // Member: mcp_yaw_deg
+  cdr << ros_message.mcp_yaw_deg;
+
   // Member: bones
   {
     size_t size = ros_message.bones.size();
@@ -386,6 +432,20 @@ get_serialized_size_key(
   // Member: width
   {
     size_t item_size = sizeof(ros_message.width);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: mcp_pitch_deg
+  {
+    size_t item_size = sizeof(ros_message.mcp_pitch_deg);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: mcp_yaw_deg
+  {
+    size_t item_size = sizeof(ros_message.mcp_yaw_deg);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -463,6 +523,22 @@ max_serialized_size_key_FingerData(
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: mcp_pitch_deg
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: mcp_yaw_deg
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   // Member: bones

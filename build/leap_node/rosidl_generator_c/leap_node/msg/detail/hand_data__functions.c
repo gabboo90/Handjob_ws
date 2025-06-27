@@ -19,7 +19,9 @@
 // Member `normal`
 // Member `direction`
 #include "geometry_msgs/msg/detail/vector3__functions.h"
-// Member `fingers`
+// Member `thumb`
+// Member `index`
+// Member `middle`
 #include "leap_node/msg/detail/finger_data__functions.h"
 
 bool
@@ -50,8 +52,18 @@ leap_node__msg__HandData__init(leap_node__msg__HandData * msg)
     leap_node__msg__HandData__fini(msg);
     return false;
   }
-  // fingers
-  if (!leap_node__msg__FingerData__Sequence__init(&msg->fingers, 0)) {
+  // thumb
+  if (!leap_node__msg__FingerData__init(&msg->thumb)) {
+    leap_node__msg__HandData__fini(msg);
+    return false;
+  }
+  // index
+  if (!leap_node__msg__FingerData__init(&msg->index)) {
+    leap_node__msg__HandData__fini(msg);
+    return false;
+  }
+  // middle
+  if (!leap_node__msg__FingerData__init(&msg->middle)) {
     leap_node__msg__HandData__fini(msg);
     return false;
   }
@@ -74,8 +86,12 @@ leap_node__msg__HandData__fini(leap_node__msg__HandData * msg)
   geometry_msgs__msg__Vector3__fini(&msg->normal);
   // direction
   geometry_msgs__msg__Vector3__fini(&msg->direction);
-  // fingers
-  leap_node__msg__FingerData__Sequence__fini(&msg->fingers);
+  // thumb
+  leap_node__msg__FingerData__fini(&msg->thumb);
+  // index
+  leap_node__msg__FingerData__fini(&msg->index);
+  // middle
+  leap_node__msg__FingerData__fini(&msg->middle);
 }
 
 bool
@@ -116,9 +132,21 @@ leap_node__msg__HandData__are_equal(const leap_node__msg__HandData * lhs, const 
   {
     return false;
   }
-  // fingers
-  if (!leap_node__msg__FingerData__Sequence__are_equal(
-      &(lhs->fingers), &(rhs->fingers)))
+  // thumb
+  if (!leap_node__msg__FingerData__are_equal(
+      &(lhs->thumb), &(rhs->thumb)))
+  {
+    return false;
+  }
+  // index
+  if (!leap_node__msg__FingerData__are_equal(
+      &(lhs->index), &(rhs->index)))
+  {
+    return false;
+  }
+  // middle
+  if (!leap_node__msg__FingerData__are_equal(
+      &(lhs->middle), &(rhs->middle)))
   {
     return false;
   }
@@ -161,9 +189,21 @@ leap_node__msg__HandData__copy(
   {
     return false;
   }
-  // fingers
-  if (!leap_node__msg__FingerData__Sequence__copy(
-      &(input->fingers), &(output->fingers)))
+  // thumb
+  if (!leap_node__msg__FingerData__copy(
+      &(input->thumb), &(output->thumb)))
+  {
+    return false;
+  }
+  // index
+  if (!leap_node__msg__FingerData__copy(
+      &(input->index), &(output->index)))
+  {
+    return false;
+  }
+  // middle
+  if (!leap_node__msg__FingerData__copy(
+      &(input->middle), &(output->middle)))
   {
     return false;
   }

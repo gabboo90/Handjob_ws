@@ -101,6 +101,7 @@
 /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/FingerData.msg
 /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/HandData.msg
 /home/gabi/Desktop/Handjob_ws/install/leap_node/lib/leap_node/sample_node
+/home/gabi/Desktop/Handjob_ws/install/leap_node/lib/leap_node/dof_publisher_node
 /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/BoneData.msg
 /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/FingerData.msg
 /home/gabi/Desktop/Handjob_ws/install/leap_node/share/leap_node/msg/HandData.msg

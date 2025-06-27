@@ -24,16 +24,48 @@ namespace msg
 namespace builder
 {
 
-class Init_HandData_fingers
+class Init_HandData_middle
 {
 public:
-  explicit Init_HandData_fingers(::leap_node::msg::HandData & msg)
+  explicit Init_HandData_middle(::leap_node::msg::HandData & msg)
   : msg_(msg)
   {}
-  ::leap_node::msg::HandData fingers(::leap_node::msg::HandData::_fingers_type arg)
+  ::leap_node::msg::HandData middle(::leap_node::msg::HandData::_middle_type arg)
   {
-    msg_.fingers = std::move(arg);
+    msg_.middle = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::leap_node::msg::HandData msg_;
+};
+
+class Init_HandData_index
+{
+public:
+  explicit Init_HandData_index(::leap_node::msg::HandData & msg)
+  : msg_(msg)
+  {}
+  Init_HandData_middle index(::leap_node::msg::HandData::_index_type arg)
+  {
+    msg_.index = std::move(arg);
+    return Init_HandData_middle(msg_);
+  }
+
+private:
+  ::leap_node::msg::HandData msg_;
+};
+
+class Init_HandData_thumb
+{
+public:
+  explicit Init_HandData_thumb(::leap_node::msg::HandData & msg)
+  : msg_(msg)
+  {}
+  Init_HandData_index thumb(::leap_node::msg::HandData::_thumb_type arg)
+  {
+    msg_.thumb = std::move(arg);
+    return Init_HandData_index(msg_);
   }
 
 private:
@@ -46,10 +78,10 @@ public:
   explicit Init_HandData_direction(::leap_node::msg::HandData & msg)
   : msg_(msg)
   {}
-  Init_HandData_fingers direction(::leap_node::msg::HandData::_direction_type arg)
+  Init_HandData_thumb direction(::leap_node::msg::HandData::_direction_type arg)
   {
     msg_.direction = std::move(arg);
-    return Init_HandData_fingers(msg_);
+    return Init_HandData_thumb(msg_);
   }
 
 private:

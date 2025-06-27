@@ -84,7 +84,9 @@ class HandData(metaclass=Metaclass_HandData):
         '_palm_position',
         '_normal',
         '_direction',
-        '_fingers',
+        '_thumb',
+        '_index',
+        '_middle',
         '_check_fields',
     ]
 
@@ -95,7 +97,9 @@ class HandData(metaclass=Metaclass_HandData):
         'palm_position': 'geometry_msgs/Point',
         'normal': 'geometry_msgs/Vector3',
         'direction': 'geometry_msgs/Vector3',
-        'fingers': 'sequence<leap_node/FingerData>',
+        'thumb': 'leap_node/FingerData',
+        'index': 'leap_node/FingerData',
+        'middle': 'leap_node/FingerData',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -107,7 +111,9 @@ class HandData(metaclass=Metaclass_HandData):
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Point'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Vector3'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'Vector3'),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['leap_node', 'msg'], 'FingerData')),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['leap_node', 'msg'], 'FingerData'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['leap_node', 'msg'], 'FingerData'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['leap_node', 'msg'], 'FingerData'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -129,7 +135,12 @@ class HandData(metaclass=Metaclass_HandData):
         self.normal = kwargs.get('normal', Vector3())
         from geometry_msgs.msg import Vector3
         self.direction = kwargs.get('direction', Vector3())
-        self.fingers = kwargs.get('fingers', [])
+        from leap_node.msg import FingerData
+        self.thumb = kwargs.get('thumb', FingerData())
+        from leap_node.msg import FingerData
+        self.index = kwargs.get('index', FingerData())
+        from leap_node.msg import FingerData
+        self.middle = kwargs.get('middle', FingerData())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -173,7 +184,11 @@ class HandData(metaclass=Metaclass_HandData):
             return False
         if self.direction != other.direction:
             return False
-        if self.fingers != other.fingers:
+        if self.thumb != other.thumb:
+            return False
+        if self.index != other.index:
+            return False
+        if self.middle != other.middle:
             return False
         return True
 
@@ -267,25 +282,43 @@ class HandData(metaclass=Metaclass_HandData):
         self._direction = value
 
     @builtins.property
-    def fingers(self):
-        """Message field 'fingers'."""
-        return self._fingers
+    def thumb(self):
+        """Message field 'thumb'."""
+        return self._thumb
 
-    @fingers.setter
-    def fingers(self, value):
+    @thumb.setter
+    def thumb(self, value):
         if self._check_fields:
             from leap_node.msg import FingerData
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, FingerData) for v in value) and
-                 True), \
-                "The 'fingers' field must be a set or sequence and each value of type 'FingerData'"
-        self._fingers = value
+                isinstance(value, FingerData), \
+                "The 'thumb' field must be a sub message of type 'FingerData'"
+        self._thumb = value
+
+    @builtins.property
+    def index(self):
+        """Message field 'index'."""
+        return self._index
+
+    @index.setter
+    def index(self, value):
+        if self._check_fields:
+            from leap_node.msg import FingerData
+            assert \
+                isinstance(value, FingerData), \
+                "The 'index' field must be a sub message of type 'FingerData'"
+        self._index = value
+
+    @builtins.property
+    def middle(self):
+        """Message field 'middle'."""
+        return self._middle
+
+    @middle.setter
+    def middle(self, value):
+        if self._check_fields:
+            from leap_node.msg import FingerData
+            assert \
+                isinstance(value, FingerData), \
+                "The 'middle' field must be a sub message of type 'FingerData'"
+        self._middle = value

@@ -100,6 +100,24 @@ bool leap_node__msg__finger_data__convert_from_py(PyObject * _pymsg, void * _ros
     ros_message->width = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // mcp_pitch_deg
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mcp_pitch_deg");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->mcp_pitch_deg = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // mcp_yaw_deg
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mcp_yaw_deg");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->mcp_yaw_deg = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // bones
     PyObject * field = PyObject_GetAttrString(_pymsg, "bones");
     if (!field) {
@@ -196,6 +214,28 @@ PyObject * leap_node__msg__finger_data__convert_to_py(void * raw_ros_message)
     field = PyFloat_FromDouble(ros_message->width);
     {
       int rc = PyObject_SetAttrString(_pymessage, "width", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // mcp_pitch_deg
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->mcp_pitch_deg);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "mcp_pitch_deg", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // mcp_yaw_deg
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->mcp_yaw_deg);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "mcp_yaw_deg", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

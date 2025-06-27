@@ -16,12 +16,6 @@
 #include "leap_node/msg/detail/hand_data__struct.h"
 #include "leap_node/msg/detail/hand_data__functions.h"
 
-#include "rosidl_runtime_c/primitives_sequence.h"
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
-
-// Nested array functions includes
-#include "leap_node/msg/detail/finger_data__functions.h"
-// end nested array functions include
 ROSIDL_GENERATOR_C_IMPORT
 bool builtin_interfaces__msg__time__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
@@ -38,6 +32,10 @@ ROSIDL_GENERATOR_C_IMPORT
 bool geometry_msgs__msg__vector3__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
 PyObject * geometry_msgs__msg__vector3__convert_to_py(void * raw_ros_message);
+bool leap_node__msg__finger_data__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * leap_node__msg__finger_data__convert_to_py(void * raw_ros_message);
+bool leap_node__msg__finger_data__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * leap_node__msg__finger_data__convert_to_py(void * raw_ros_message);
 bool leap_node__msg__finger_data__convert_from_py(PyObject * _pymsg, void * _ros_message);
 PyObject * leap_node__msg__finger_data__convert_to_py(void * raw_ros_message);
 
@@ -136,37 +134,37 @@ bool leap_node__msg__hand_data__convert_from_py(PyObject * _pymsg, void * _ros_m
     }
     Py_DECREF(field);
   }
-  {  // fingers
-    PyObject * field = PyObject_GetAttrString(_pymsg, "fingers");
+  {  // thumb
+    PyObject * field = PyObject_GetAttrString(_pymsg, "thumb");
     if (!field) {
       return false;
     }
-    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'fingers'");
-    if (!seq_field) {
+    if (!leap_node__msg__finger_data__convert_from_py(field, &ros_message->thumb)) {
       Py_DECREF(field);
       return false;
     }
-    Py_ssize_t size = PySequence_Size(field);
-    if (-1 == size) {
-      Py_DECREF(seq_field);
+    Py_DECREF(field);
+  }
+  {  // index
+    PyObject * field = PyObject_GetAttrString(_pymsg, "index");
+    if (!field) {
+      return false;
+    }
+    if (!leap_node__msg__finger_data__convert_from_py(field, &ros_message->index)) {
       Py_DECREF(field);
       return false;
     }
-    if (!leap_node__msg__FingerData__Sequence__init(&(ros_message->fingers), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create leap_node__msg__FingerData__Sequence ros_message");
-      Py_DECREF(seq_field);
+    Py_DECREF(field);
+  }
+  {  // middle
+    PyObject * field = PyObject_GetAttrString(_pymsg, "middle");
+    if (!field) {
+      return false;
+    }
+    if (!leap_node__msg__finger_data__convert_from_py(field, &ros_message->middle)) {
       Py_DECREF(field);
       return false;
     }
-    leap_node__msg__FingerData * dest = ros_message->fingers.data;
-    for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!leap_node__msg__finger_data__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-    }
-    Py_DECREF(seq_field);
     Py_DECREF(field);
   }
 
@@ -269,28 +267,42 @@ PyObject * leap_node__msg__hand_data__convert_to_py(void * raw_ros_message)
       }
     }
   }
-  {  // fingers
+  {  // thumb
     PyObject * field = NULL;
-    size_t size = ros_message->fingers.size;
-    field = PyList_New(size);
+    field = leap_node__msg__finger_data__convert_to_py(&ros_message->thumb);
     if (!field) {
       return NULL;
     }
-    leap_node__msg__FingerData * item;
-    for (size_t i = 0; i < size; ++i) {
-      item = &(ros_message->fingers.data[i]);
-      PyObject * pyitem = leap_node__msg__finger_data__convert_to_py(item);
-      if (!pyitem) {
-        Py_DECREF(field);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "thumb", field);
+      Py_DECREF(field);
+      if (rc) {
         return NULL;
       }
-      int rc = PyList_SetItem(field, i, pyitem);
-      (void)rc;
-      assert(rc == 0);
     }
-    assert(PySequence_Check(field));
+  }
+  {  // index
+    PyObject * field = NULL;
+    field = leap_node__msg__finger_data__convert_to_py(&ros_message->index);
+    if (!field) {
+      return NULL;
+    }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "fingers", field);
+      int rc = PyObject_SetAttrString(_pymessage, "index", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // middle
+    PyObject * field = NULL;
+    field = leap_node__msg__finger_data__convert_to_py(&ros_message->middle);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "middle", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -246,6 +246,4 @@ CMakeFiles/leap_node__rosidl_generator_py.dir/rosidl_generator_py/leap_node/msg/
  /opt/ros/jazzy/include/rcutils/rcutils/sha256.h \
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
- /home/gabi/Desktop/Handjob_ws/build/leap_node/rosidl_generator_c/leap_node/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
- /home/gabi/Desktop/Handjob_ws/build/leap_node/rosidl_generator_c/leap_node/msg/detail/finger_data__functions.h
+ /home/gabi/Desktop/Handjob_ws/build/leap_node/rosidl_generator_c/leap_node/msg/rosidl_generator_c__visibility_control.h

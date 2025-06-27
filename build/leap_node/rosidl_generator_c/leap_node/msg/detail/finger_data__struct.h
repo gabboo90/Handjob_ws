@@ -32,6 +32,10 @@ typedef struct leap_node__msg__FingerData
   int32_t finger_type;
   float length;
   float width;
+  /// Beugung/Nicken
+  double mcp_pitch_deg;
+  /// Spreizung/Drehung
+  double mcp_yaw_deg;
   leap_node__msg__BoneData__Sequence bones;
 } leap_node__msg__FingerData;
 

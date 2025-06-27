@@ -44,6 +44,26 @@
           "default_value": ""
         },
         {
+          "name": "mcp_pitch_deg",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "mcp_yaw_deg",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "bones",
           "type": {
             "type_id": 145,
@@ -211,7 +231,7 @@
   "type_hashes": [
     {
       "type_name": "leap_node/msg/FingerData",
-      "hash_string": "RIHS01_482755d05ddd9205667815407e4e5855f7076eb79a169225751067fd20922ac3"
+      "hash_string": "RIHS01_c4f4401e020ec6798dc2f405c3bd507885eb6dce227152853af5f9fc7b4dcc54"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",

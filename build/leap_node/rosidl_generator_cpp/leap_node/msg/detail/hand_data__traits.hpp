@@ -25,7 +25,9 @@
 // Member 'normal'
 // Member 'direction'
 #include "geometry_msgs/msg/detail/vector3__traits.hpp"
-// Member 'fingers'
+// Member 'thumb'
+// Member 'index'
+// Member 'middle'
 #include "leap_node/msg/detail/finger_data__traits.hpp"
 
 namespace leap_node
@@ -81,21 +83,24 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: fingers
+  // member: thumb
   {
-    if (msg.fingers.size() == 0) {
-      out << "fingers: []";
-    } else {
-      out << "fingers: [";
-      size_t pending_items = msg.fingers.size();
-      for (auto item : msg.fingers) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "thumb: ";
+    to_flow_style_yaml(msg.thumb, out);
+    out << ", ";
+  }
+
+  // member: index
+  {
+    out << "index: ";
+    to_flow_style_yaml(msg.index, out);
+    out << ", ";
+  }
+
+  // member: middle
+  {
+    out << "middle: ";
+    to_flow_style_yaml(msg.middle, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -160,23 +165,31 @@ inline void to_block_style_yaml(
     to_block_style_yaml(msg.direction, out, indentation + 2);
   }
 
-  // member: fingers
+  // member: thumb
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.fingers.size() == 0) {
-      out << "fingers: []\n";
-    } else {
-      out << "fingers:\n";
-      for (auto item : msg.fingers) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
+    out << "thumb:\n";
+    to_block_style_yaml(msg.thumb, out, indentation + 2);
+  }
+
+  // member: index
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
     }
+    out << "index:\n";
+    to_block_style_yaml(msg.index, out, indentation + 2);
+  }
+
+  // member: middle
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "middle:\n";
+    to_block_style_yaml(msg.middle, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 
@@ -226,11 +239,11 @@ inline const char * name<leap_node::msg::HandData>()
 
 template<>
 struct has_fixed_size<leap_node::msg::HandData>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_fixed_size<builtin_interfaces::msg::Time>::value && has_fixed_size<geometry_msgs::msg::Point>::value && has_fixed_size<geometry_msgs::msg::Vector3>::value && has_fixed_size<leap_node::msg::FingerData>::value> {};
 
 template<>
 struct has_bounded_size<leap_node::msg::HandData>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_bounded_size<builtin_interfaces::msg::Time>::value && has_bounded_size<geometry_msgs::msg::Point>::value && has_bounded_size<geometry_msgs::msg::Vector3>::value && has_bounded_size<leap_node::msg::FingerData>::value> {};
 
 template<>
 struct is_message<leap_node::msg::HandData>

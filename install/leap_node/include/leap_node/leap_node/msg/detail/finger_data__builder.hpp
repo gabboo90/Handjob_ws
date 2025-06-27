@@ -40,16 +40,48 @@ private:
   ::leap_node::msg::FingerData msg_;
 };
 
+class Init_FingerData_mcp_yaw_deg
+{
+public:
+  explicit Init_FingerData_mcp_yaw_deg(::leap_node::msg::FingerData & msg)
+  : msg_(msg)
+  {}
+  Init_FingerData_bones mcp_yaw_deg(::leap_node::msg::FingerData::_mcp_yaw_deg_type arg)
+  {
+    msg_.mcp_yaw_deg = std::move(arg);
+    return Init_FingerData_bones(msg_);
+  }
+
+private:
+  ::leap_node::msg::FingerData msg_;
+};
+
+class Init_FingerData_mcp_pitch_deg
+{
+public:
+  explicit Init_FingerData_mcp_pitch_deg(::leap_node::msg::FingerData & msg)
+  : msg_(msg)
+  {}
+  Init_FingerData_mcp_yaw_deg mcp_pitch_deg(::leap_node::msg::FingerData::_mcp_pitch_deg_type arg)
+  {
+    msg_.mcp_pitch_deg = std::move(arg);
+    return Init_FingerData_mcp_yaw_deg(msg_);
+  }
+
+private:
+  ::leap_node::msg::FingerData msg_;
+};
+
 class Init_FingerData_width
 {
 public:
   explicit Init_FingerData_width(::leap_node::msg::FingerData & msg)
   : msg_(msg)
   {}
-  Init_FingerData_bones width(::leap_node::msg::FingerData::_width_type arg)
+  Init_FingerData_mcp_pitch_deg width(::leap_node::msg::FingerData::_width_type arg)
   {
     msg_.width = std::move(arg);
-    return Init_FingerData_bones(msg_);
+    return Init_FingerData_mcp_pitch_deg(msg_);
   }
 
 private:

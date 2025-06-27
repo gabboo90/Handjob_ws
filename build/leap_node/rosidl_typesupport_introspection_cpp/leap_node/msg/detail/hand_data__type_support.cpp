@@ -38,52 +38,7 @@ void HandData_fini_function(void * message_memory)
   typed_message->~HandData();
 }
 
-size_t size_function__HandData__fingers(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<leap_node::msg::FingerData> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__HandData__fingers(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<leap_node::msg::FingerData> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__HandData__fingers(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<leap_node::msg::FingerData> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__HandData__fingers(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const leap_node::msg::FingerData *>(
-    get_const_function__HandData__fingers(untyped_member, index));
-  auto & value = *reinterpret_cast<leap_node::msg::FingerData *>(untyped_value);
-  value = item;
-}
-
-void assign_function__HandData__fingers(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<leap_node::msg::FingerData *>(
-    get_function__HandData__fingers(untyped_member, index));
-  const auto & value = *reinterpret_cast<const leap_node::msg::FingerData *>(untyped_value);
-  item = value;
-}
-
-void resize_function__HandData__fingers(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<leap_node::msg::FingerData> *>(untyped_member);
-  member->resize(size);
-}
-
-static const ::rosidl_typesupport_introspection_cpp::MessageMember HandData_message_member_array[7] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember HandData_message_member_array[9] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -193,29 +148,65 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember HandData_mess
     nullptr  // resize(index) function pointer
   },
   {
-    "fingers",  // name
+    "thumb",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<leap_node::msg::FingerData>(),  // members of sub message
     false,  // is key
-    true,  // is array
+    false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(leap_node::msg::HandData, fingers),  // bytes offset in struct
+    offsetof(leap_node::msg::HandData, thumb),  // bytes offset in struct
     nullptr,  // default value
-    size_function__HandData__fingers,  // size() function pointer
-    get_const_function__HandData__fingers,  // get_const(index) function pointer
-    get_function__HandData__fingers,  // get(index) function pointer
-    fetch_function__HandData__fingers,  // fetch(index, &value) function pointer
-    assign_function__HandData__fingers,  // assign(index, value) function pointer
-    resize_function__HandData__fingers  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "index",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<leap_node::msg::FingerData>(),  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node::msg::HandData, index),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "middle",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<leap_node::msg::FingerData>(),  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(leap_node::msg::HandData, middle),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers HandData_message_members = {
   "leap_node::msg",  // message namespace
   "HandData",  // message name
-  7,  // number of fields
+  9,  // number of fields
   sizeof(leap_node::msg::HandData),
   false,  // has_any_key_member_
   HandData_message_member_array,  // message members
