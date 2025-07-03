@@ -14,11 +14,11 @@
   <depend>geometry_msgs</depend>
   <depend>std_msgs</depend>
   <depend>builtin_interfaces</depend>
-<<<<<<< HEAD
-=======
+
+  
   <build_depend>rosidl_default_generators</build_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>
->>>>>>> 87f10d9 (03.07.25)
+
 
   <exec_depend>rosidl_default_runtime</exec_depend>
 

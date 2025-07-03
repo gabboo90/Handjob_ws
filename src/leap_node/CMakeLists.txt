@@ -64,10 +64,9 @@ ament_target_dependencies(dof_publisher_node
   visualization_msgs
 )
 
-# <--- WICHTIG: Abhängigkeit zu den generierten Messages hinzufügen!
-rosidl_target_interfaces(dof_publisher_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp"
-)
+rosidl_get_typesupport_target(cpp_typesupport_target "${PROJECT_NAME}" "rosidl_typesupport_cpp")
+target_link_libraries(dof_publisher_node "${cpp_typesupport_target}")
+
 
 # Installation
 install(TARGETS

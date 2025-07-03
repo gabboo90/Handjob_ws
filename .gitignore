@@ -2,6 +2,7 @@
 build/
 install/
 log/
+/leap_extracted
 
 # Ignoriere DynamixelSDK (Sub-Repository)
 src/DynamixelSDK/
