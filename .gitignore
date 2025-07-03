@@ -1,0 +1,21 @@
+# ROS 2 Build, Install und Log Verzeichnisse
+build/
+install/
+log/
+
+# Ignoriere DynamixelSDK (Sub-Repository)
+src/DynamixelSDK/
+
+# Python Cache Dateien
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor-Dateien
+.vscode/
+*.swp
+*.swo
+
+# MacOS Dateien
+.DS_Store
+src/DynamixelSDK/
